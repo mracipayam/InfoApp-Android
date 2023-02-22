@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(baloon)
 
         //Adapter and Layout
-        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,landmarkList.map { landmark -> landmark.name  })
-        binding.listView.adapter = adapter
-
-        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            val intent = Intent(MainActivity@this,DetailsActivity::class.java)
-            intent.putExtra("landmark",landmarkList.get(position));
-            startActivity(intent)
-        }
+//        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,landmarkList.map { landmark -> landmark.name  })
+//        binding.listView.adapter = adapter
+//
+//        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+//            val intent = Intent(MainActivity@this,DetailsActivity::class.java)
+//            intent.putExtra("landmark",landmarkList.get(position));
+//            startActivity(intent)
+//        }
     }
 }
