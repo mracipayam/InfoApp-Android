@@ -1,11 +1,8 @@
 package com.mracipayam.infoappsample
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import com.mracipayam.infoappsample.databinding.ActivityDetailsBinding
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.mracipayam.infoappsample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(coffee)
         landmarkList.add(nevsehir)
         landmarkList.add(baloon)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        val landmarkAdapter = LandmarkAdapter(landmarkList)
+        binding.recyclerView.adapter = landmarkAdapter
 
         //Adapter and Layout
 //        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,landmarkList.map { landmark -> landmark.name  })
